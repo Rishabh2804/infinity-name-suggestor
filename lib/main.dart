@@ -11,17 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final wordPair = WordPair.random();
-    return MaterialApp(
-      // debugShowCheckedModeBanner: false,
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Startup Name Generator',
-      theme: ThemeData(
-        // Add the 5 lines from here...
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
-        ),
-      ), // ... to here.
-      home: const RandomWords(), // And add the const back here.
+      // theme: ThemeData(
+      //   appBarTheme: const AppBarTheme(
+      //     backgroundColor: Colors.white,
+      //     foregroundColor: Colors.black,
+      //   ),
+      // ),
+      home: RandomWords(),
     );
   }
 }
@@ -110,7 +109,7 @@ class _RandomWordsState extends State<RandomWords> {
           IconButton(
             icon: const Icon(Icons.list),
             onPressed: _pushSaved,
-            tooltip: 'Saved Suggestions',
+            // tooltip: 'Saved Suggestions',
           ),
         ],
       ),
